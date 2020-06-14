@@ -6,7 +6,7 @@ function calculate(request, response) {
     var val2 = parseFloat(request.query.val2);
     var oper = request.query.oper;
     if (!val1 || !val2 || !oper)
-        return response.json({ message: "Verifique se os parâmetros val1, val2 e oper foram informados corretamente" });
+        return response.json({ message: "Para ver como utilizar este webservice, acesse https://calculadora-webservice.herokuapp.com/docs" });
     switch (oper) {
         case 'soma':
             return response.json({ expression: val1 + "+" + val2, result: val1 + val2, message: "Expressão calculada sem erros" });

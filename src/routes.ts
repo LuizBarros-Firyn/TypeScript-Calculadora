@@ -14,7 +14,7 @@ export function calculate(request: calculateQueryReq, response: Response) {
     const oper = request.query.oper; 
 
     if (!val1 || !val2 || !oper)
-        return response.json({message: "Verifique se os parâmetros val1, val2 e oper foram informados corretamente"})
+        return response.json({message: "Para ver como utilizar este webservice, acesse https://calculadora-webservice.herokuapp.com/docs"});
 
     switch (oper) {
         case 'soma':
@@ -26,6 +26,6 @@ export function calculate(request: calculateQueryReq, response: Response) {
         case 'divisao': case 'divisão':
             return response.json({ expression: `${val1}/${val2}`, result: val1 / val2, message: "Expressão calculada sem erros" });
         default:
-            return response.json({ message: "Erro na execução do código, verifique se os parâmetros foram enviados corretamente"})
+            return response.json({ message: "Erro na execução do código, verifique se os parâmetros foram enviados corretamente"});
     }
 }
