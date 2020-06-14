@@ -13,8 +13,6 @@ export function calculate(request: calculateQueryReq, response: Response) {
     const val2: number = parseFloat(request.query.val2);
     const oper = request.query.oper; 
 
-    console.log(val1, val2, oper);
-
     if (!val1 || !val2 || !oper)
         return response.json({message: "Verifique se os parâmetros val1, val2 e oper foram informados corretamente"})
 

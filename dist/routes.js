@@ -5,7 +5,6 @@ function calculate(request, response) {
     var val1 = parseFloat(request.query.val1);
     var val2 = parseFloat(request.query.val2);
     var oper = request.query.oper;
-    console.log(val1, val2, oper);
     if (!val1 || !val2 || !oper)
         return response.json({ message: "Verifique se os parâmetros val1, val2 e oper foram informados corretamente" });
     switch (oper) {
